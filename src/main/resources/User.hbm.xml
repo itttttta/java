@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--
+    <hibernate-mapping>一般不去配置，采用默认即可。
+    default-cascade="none"：默认的级联风格，表与表联动。
+    default-lazy="true"：默认延迟加载
+ -->
+<hibernate-mapping>
+    <class name = "Enity.User" table="users">
+        <id name="id" type="java.lang.Integer" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="name" type="java.lang.String" column="name">
+        </property>
+        <property name="password" type="java.lang.String" column="password">
+        </property>
+        <property name="type" type="java.lang.String" column="type">
+        </property>
+    </class>
+</hibernate-mapping>
